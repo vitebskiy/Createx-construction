@@ -16,3 +16,15 @@ const portfolioSlider = new Swiper('.portfolio-section__items', {
   },
 
 });
+
+const testimonialsSlider = new Swiper('.testimonials__items', {
+
+  slidesPerView: '1',
+  loop: true,
+  spaceBetween: gap,
+  navigation: {
+    nextEl: '.testimonials__next',
+    prevEl: '.testimonials__prev',
+  },
+
+});

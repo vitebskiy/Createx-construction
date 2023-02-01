@@ -10,7 +10,10 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_slider_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/slider.js */ "./src/js/components/slider.js");
+/* harmony import */ var _components_progress_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/progress.js */ "./src/js/components/progress.js");
+/* harmony import */ var _components_progress_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_progress_js__WEBPACK_IMPORTED_MODULE_1__);
 console.log('components');
+
 
 
 /***/ }),
@@ -150,6 +153,41 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/js/components/progress.js":
+/*!***************************************!*\
+  !*** ./src/js/components/progress.js ***!
+  \***************************************/
+/***/ (() => {
+
+const circles = document.querySelectorAll('.facts-element__circle');
+circles.forEach(el => {
+  if (el.dataset.percentage == 'true') {
+    let progress = el.querySelector('.progress');
+    let valueBlock = el.querySelector('.facts-element__value');
+    let radius = progress.getAttribute('r');
+    let circleLength = 2 * Math.PI * radius;
+    let full = el.dataset.full;
+    let value = el.dataset.value;
+    let percentageProgress = Math.floor(value / full * 100);
+    console.log(percentageProgress);
+    valueBlock.textContent = value;
+    progress.setAttribute('stroke-dasharray', circleLength);
+    progress.setAttribute('stroke-dashoffset', circleLength - circleLength * percentageProgress / 100);
+  } else {
+    let progress = el.querySelector('.progress');
+    let valueBlock = el.querySelector('.facts-element__value');
+    let radius = progress.getAttribute('r');
+    let circleLength = 2 * Math.PI * radius;
+    let percent = el.dataset.percent;
+    let percentageProgress = Math.floor(percent);
+    valueBlock.textContent = percent + '%';
+    progress.setAttribute('stroke-dasharray', circleLength);
+    progress.setAttribute('stroke-dashoffset', circleLength - circleLength * percentageProgress / 100);
+  }
+});
+
+/***/ }),
+
 /***/ "./src/js/components/slider.js":
 /*!*************************************!*\
   !*** ./src/js/components/slider.js ***!
@@ -171,6 +209,15 @@ const portfolioSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.por
   navigation: {
     nextEl: '.portfolio-section__next',
     prevEl: '.portfolio-section__prev'
+  }
+});
+const testimonialsSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.testimonials__items', {
+  slidesPerView: '1',
+  loop: true,
+  spaceBetween: gap,
+  navigation: {
+    nextEl: '.testimonials__next',
+    prevEl: '.testimonials__prev'
   }
 });
 
