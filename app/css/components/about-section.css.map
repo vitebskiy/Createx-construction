@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/about-section.scss","components/about-section.css"],"names":[],"mappings":"AAAA;EACE,oBAAA;EACA,oCAAA;ACCF","file":"components/about-section.css","sourcesContent":[".about-section {\n  padding-bottom: 60px;\n  background-color: var(--color-light);\n}\n",".about-section {\n  padding-bottom: 60px;\n  background-color: var(--color-light);\n}"]}
