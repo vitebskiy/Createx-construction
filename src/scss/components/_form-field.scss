@@ -11,15 +11,20 @@
   &__input {
     border: 1px solid #d7dadd;
     border-radius: 4px;
+    padding-left: 15px;
     width: 260px;
     height: 44px;
     font-size: 14px;
     line-height: 150%;
-    background: #f4f5f7;
 
     &::placeholder {
-      padding-left: 15px;
       color: #9a9ca5;
+    }
+
+    &--big {
+      padding-top: 10px;
+      height: 66px;
+      resize: none;
     }
   }
 
@@ -30,4 +35,13 @@
       width: 100%;
     }
   }
-}
+
+  &--gray {
+    width: 100%;
+
+    .form-field__input {
+      width: 100%;
+      background-color: var(--color-athens);
+    }
+  }
+} 
