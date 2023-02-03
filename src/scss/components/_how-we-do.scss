@@ -1,5 +1,6 @@
 .how-we-do {
-  padding: 45px 0;
+  padding-top: 45px;
+  padding-bottom: 119px;
 
   &__title {
     margin-bottom: 60px;
@@ -17,7 +18,7 @@
 
     &::before {
       counter-increment: section;
-      content: "0"counter(section);
+      content: "0" counter(section);
       margin-bottom: 18px;
       font-weight: 700;
       font-size: 46px;
