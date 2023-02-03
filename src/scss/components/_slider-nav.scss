@@ -1,6 +1,10 @@
 .slider-nav {
   @include flex-v-center;
 
+  position: relative;
+  z-index: 15;
+  user-select: none;
+
   &__btn {
     @include flex-all-center;
 

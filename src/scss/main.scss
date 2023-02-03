@@ -4,15 +4,15 @@
 @import "fonts";
 @import "settings";
 
-// Компоненты страницы
+// компоненты страницы
 @import "./components/slider-nav";
 @import "./components/form-field";
 
-// подключения компонентов страницы
+// подключения компонентов страницы (большие компоненты)
 @import "./components/header";
 @import "./components/hero";
 @import "./components/about-section";
-@import "./components/mession";
+@import "./components/mission";
 @import "./components/services-section";
 @import "./components/portfolio-section";
 @import "./components/partners";
@@ -21,11 +21,12 @@
 @import "./components/recent-news";
 @import "./components/contacts-section";
 @import "./components/footer";
-
-@import "./components/hero-services";
+@import "./components/page-hero";
 @import "./components/services-content";
+@import "./components/we-offer";
+@import "./components/how-we-do";
 
-// Подключение маленьких компонентов
+// подключения компонентов страницы (маленькие компоненты)
 @import "./components/nav";
 @import "./components/header-contacts";
 @import "./components/video-block";

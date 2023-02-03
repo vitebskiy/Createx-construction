@@ -1,2 +1,1 @@
-
-console.log('эй');
+console.log('maxgraph');

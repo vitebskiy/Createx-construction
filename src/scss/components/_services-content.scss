@@ -25,10 +25,7 @@
   }
 
   &__item {
-    display: grid;
     align-items: center;
-    grid-template-columns: repeat(12, 1fr);
-    gap: var(--grid-gap);
 
     &:not(:last-child) {
       margin-bottom: 118px;
@@ -58,7 +55,7 @@
 
   &__title {
     margin: 0;
-    margin-bottom: 25px;
+    margin-bottom: 24px;
     font-weight: 700;
     font-size: 32px;
     line-height: 150%;
@@ -70,7 +67,7 @@
     margin-bottom: 50px;
     font-size: 16px;
     line-height: 160%;
-    color: var(--color-shtorm);
+    color: var(--color-storm);
   }
 
   &__link {

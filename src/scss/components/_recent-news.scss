@@ -1,5 +1,5 @@
 .recent-news {
-  padding-top: 78px;
+  padding-top: 80px;
   padding-bottom: 120px;
   background-color: var(--color-light);
 
@@ -8,11 +8,8 @@
   }
 
   &__list {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(2, 255px);
     margin-bottom: 80px;
-    gap: var(--grid-gap);
   }
 
   &__item {
@@ -29,15 +26,15 @@
   overflow: hidden;
   border-radius: 4px;
   height: 100%;
-  box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08),
-    0px 30px 24px -10px rgba(154, 156, 165, 0.05),
-    0px 12px 10px -6px rgba(154, 156, 165, 0.04),
-    0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+  box-shadow:
+    0 80px 80px -20px rgba(154, 156, 165, 0.08),
+    0 30px 24px -10px rgba(154, 156, 165, 0.05),
+    0 12px 10px -6px rgba(154, 156, 165, 0.04),
+    0 4px 4px -4px rgba(30, 33, 44, 0.03);
   background-color: var(--color-light);
 
   &__text {
-    padding: 21px 25px;
-    padding-bottom: 25px;
+    padding: 20px 24px;
   }
 
   &__title {
@@ -53,7 +50,7 @@
   }
 
   &__meta {
-    margin-bottom: 16px;
+    margin-bottom: 17px;
   }
 
   &__link {
@@ -78,10 +75,10 @@
   }
 }
 
-.artical-meta {
+.article-meta {
   font-size: 14px;
   line-height: 150%;
-  color: var(--color-shtorm);
+  color: var(--color-storm);
 
   &__item {
     position: relative;
@@ -93,8 +90,8 @@
       &::after {
         content: "";
         position: absolute;
+        right: -13px;
         top: 2px;
-        right: -14px;
         width: 1px;
         height: 11px;
         color: inherit;

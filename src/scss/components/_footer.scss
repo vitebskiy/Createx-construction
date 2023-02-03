@@ -1,13 +1,7 @@
 .footer {
   padding: 80px 0;
   color: rgba(255, 255, 255, 0.6);
-  background-color: #1e212c;
-
-  &__container {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 30px;
-  }
+  background-color: var(--color-ebony);
 
   &__left {
     grid-column: 7 span;
@@ -19,7 +13,8 @@
 
   &__top {
     @include flex-v-center;
-    margin-bottom: 23px;
+
+    margin-bottom: 22px;
   }
 
   &__descr {
@@ -43,8 +38,8 @@
   }
 
   &__copyright {
-    padding-top: 30px;
     grid-column: 12 span;
+    padding-top: 30px;
     font-size: 12px;
     line-height: 150%;
     color: var(--color-light);
@@ -52,9 +47,9 @@
     span {
       padding-left: 22px;
       background-image: url("../img/heart.svg");
-      background-position: 3px center;
+      background-position: 2px center;
+      background-size: 16px 16px;
       background-repeat: no-repeat;
-      background-size: 16px 16px ;
     }
   }
 }
@@ -71,19 +66,20 @@
 
   &__items {
     @include flex-v-center;
-    margin-bottom: 17px;
+
+    margin-bottom: 15px;
   }
 
   .form-field {
     margin: 0;
+    width: 364px;
   }
 
   .form-field__input {
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    border-right: 0;
-    background: rgba(255, 255, 255, 0.12);
+    background-color: rgba(255, 255, 255, 0.12);
   }
 
   &__btn {
@@ -102,7 +98,7 @@
 
 .footer-title {
   margin: 0;
-  margin-bottom: 13px;
+  margin-bottom: 15px;
   font-weight: 700;
   font-size: 16px;
   line-height: 150%;

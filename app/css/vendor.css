@@ -44,7 +44,6 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   /* 1 */
   height: 0;
@@ -230,7 +229,6 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   color: inherit;
@@ -265,7 +263,6 @@ textarea {
  */
 [type=checkbox],
 [type=radio] {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -342,15 +339,15 @@ template {
 }
 
 /**
- * Swiper 8.4.6
+ * Swiper 7.0.7
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
- * Copyright 2014-2023 Vladimir Kharlampidi
+ * Copyright 2014-2021 Vladimir Kharlampidi
  *
  * Released under the MIT License
  *
- * Released on: January 17, 2023
+ * Released on: September 29, 2021
  */
 @font-face {
   font-family: swiper-icons;
@@ -373,9 +370,6 @@ template {
 }
 
 .swiper-vertical > .swiper-wrapper {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -384,44 +378,29 @@ template {
   width: 100%;
   height: 100%;
   z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  -o-transition-property: transform;
   transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 
 .swiper-android .swiper-slide, .swiper-wrapper {
-  -webkit-transform: translate3d(0px, 0, 0);
   transform: translate3d(0px, 0, 0);
 }
 
 .swiper-pointer-events {
-  -ms-touch-action: pan-y;
   touch-action: pan-y;
 }
 
 .swiper-pointer-events.swiper-vertical {
-  -ms-touch-action: pan-x;
   touch-action: pan-x;
 }
 
 .swiper-slide {
-  -ms-flex-negative: 0;
   flex-shrink: 0;
   width: 100%;
   height: 100%;
   position: relative;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  -o-transition-property: transform;
   transition-property: transform;
-  transition-property: transform, -webkit-transform;
 }
 
 .swiper-slide-invisible-blank {
@@ -433,30 +412,15 @@ template {
 }
 
 .swiper-autoheight .swiper-wrapper {
-  -webkit-box-align: start;
-  -ms-flex-align: start;
   align-items: flex-start;
-  -webkit-transition-property: height, -webkit-transform;
-  transition-property: height, -webkit-transform;
-  -o-transition-property: transform, height;
   transition-property: transform, height;
-  transition-property: transform, height, -webkit-transform;
-}
-
-.swiper-backface-hidden .swiper-slide {
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
 }
 
 .swiper-3d, .swiper-3d.swiper-css-mode .swiper-wrapper {
-  -webkit-perspective: 1200px;
   perspective: 1200px;
 }
 
 .swiper-3d .swiper-cube-shadow, .swiper-3d .swiper-slide, .swiper-3d .swiper-slide-shadow, .swiper-3d .swiper-slide-shadow-bottom, .swiper-3d .swiper-slide-shadow-left, .swiper-3d .swiper-slide-shadow-right, .swiper-3d .swiper-slide-shadow-top, .swiper-3d .swiper-wrapper {
-  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
@@ -475,26 +439,18 @@ template {
 }
 
 .swiper-3d .swiper-slide-shadow-left {
-  background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -o-linear-gradient(right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-3d .swiper-slide-shadow-right {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-3d .swiper-slide-shadow-top {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-3d .swiper-slide-shadow-bottom {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
@@ -524,10 +480,7 @@ template {
 
 .swiper-centered > .swiper-wrapper::before {
   content: "";
-  -ms-flex-negative: 0;
   flex-shrink: 0;
-  -webkit-box-ordinal-group: 10000;
-  -ms-flex-order: 9999;
   order: 9999;
 }
 
@@ -555,13 +508,6 @@ template {
 
 .swiper-centered > .swiper-wrapper > .swiper-slide {
   scroll-snap-align: center center;
-  scroll-snap-stop: always;
-}
-
-.swiper-virtual .swiper-slide {
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
 }
 
 .swiper-virtual.swiper-css-mode .swiper-wrapper::after {
@@ -594,14 +540,8 @@ template {
   margin-top: calc(0px - var(--swiper-navigation-size) / 2);
   z-index: 10;
   cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   color: var(--swiper-navigation-color, var(--swiper-theme-color));
 }
@@ -612,21 +552,12 @@ template {
   pointer-events: none;
 }
 
-.swiper-button-next.swiper-button-hidden, .swiper-button-prev.swiper-button-hidden {
-  opacity: 0;
-  cursor: auto;
-  pointer-events: none;
-}
-
-.swiper-navigation-disabled .swiper-button-next, .swiper-navigation-disabled .swiper-button-prev {
-  display: none !important;
-}
-
 .swiper-button-next:after, .swiper-button-prev:after {
   font-family: swiper-icons;
   font-size: var(--swiper-navigation-size);
   text-transform: none !important;
   letter-spacing: 0;
+  text-transform: none;
   font-variant: initial;
   line-height: 1;
 }
@@ -656,20 +587,13 @@ template {
 .swiper-pagination {
   position: absolute;
   text-align: center;
-  -webkit-transition: 0.3s opacity;
-  -o-transition: 0.3s opacity;
   transition: 0.3s opacity;
-  -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   z-index: 10;
 }
 
 .swiper-pagination.swiper-pagination-hidden {
   opacity: 0;
-}
-
-.swiper-pagination-disabled > .swiper-pagination, .swiper-pagination.swiper-pagination-disabled {
-  display: none !important;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
@@ -684,45 +608,31 @@ template {
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
-  -webkit-transform: scale(0.33);
-  -ms-transform: scale(0.33);
   transform: scale(0.33);
   position: relative;
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
   transform: scale(1);
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
   transform: scale(1);
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev {
-  -webkit-transform: scale(0.66);
-  -ms-transform: scale(0.66);
   transform: scale(0.66);
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev {
-  -webkit-transform: scale(0.33);
-  -ms-transform: scale(0.33);
   transform: scale(0.33);
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next {
-  -webkit-transform: scale(0.66);
-  -ms-transform: scale(0.66);
   transform: scale(0.66);
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next {
-  -webkit-transform: scale(0.33);
-  -ms-transform: scale(0.33);
   transform: scale(0.33);
 }
 
@@ -739,7 +649,6 @@ button.swiper-pagination-bullet {
   border: none;
   margin: 0;
   padding: 0;
-  -webkit-box-shadow: none;
   box-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -762,7 +671,6 @@ button.swiper-pagination-bullet {
 .swiper-pagination-vertical.swiper-pagination-bullets, .swiper-vertical > .swiper-pagination-bullets {
   right: 10px;
   top: 50%;
-  -webkit-transform: translate3d(0px, -50%, 0);
   transform: translate3d(0px, -50%, 0);
 }
 
@@ -773,19 +681,13 @@ button.swiper-pagination-bullet {
 
 .swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic, .swiper-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   width: 8px;
 }
 
 .swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet, .swiper-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   display: inline-block;
-  -webkit-transition: 0.2s top, 0.2s -webkit-transform;
-  transition: 0.2s top, 0.2s -webkit-transform;
-  -o-transition: 0.2s transform, 0.2s top;
   transition: 0.2s transform, 0.2s top;
-  transition: 0.2s transform, 0.2s top, 0.2s -webkit-transform;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
@@ -794,26 +696,16 @@ button.swiper-pagination-bullet {
 
 .swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic, .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
   left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   white-space: nowrap;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
-  -webkit-transition: 0.2s left, 0.2s -webkit-transform;
-  transition: 0.2s left, 0.2s -webkit-transform;
-  -o-transition: 0.2s transform, 0.2s left;
   transition: 0.2s transform, 0.2s left;
-  transition: 0.2s transform, 0.2s left, 0.2s -webkit-transform;
 }
 
 .swiper-horizontal.swiper-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
-  -webkit-transition: 0.2s right, 0.2s -webkit-transform;
-  transition: 0.2s right, 0.2s -webkit-transform;
-  -o-transition: 0.2s transform, 0.2s right;
   transition: 0.2s transform, 0.2s right;
-  transition: 0.2s transform, 0.2s right, 0.2s -webkit-transform;
 }
 
 .swiper-pagination-progressbar {
@@ -828,17 +720,11 @@ button.swiper-pagination-bullet {
   top: 0;
   width: 100%;
   height: 100%;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
   transform: scale(0);
-  -webkit-transform-origin: left top;
-  -ms-transform-origin: left top;
   transform-origin: left top;
 }
 
 .swiper-rtl .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-  -webkit-transform-origin: right top;
-  -ms-transform-origin: right top;
   transform-origin: right top;
 }
 
@@ -867,11 +753,7 @@ button.swiper-pagination-bullet {
   background: rgba(0, 0, 0, 0.1);
 }
 
-.swiper-scrollbar-disabled > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-disabled {
-  display: none !important;
-}
-
-.swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+.swiper-horizontal > .swiper-scrollbar {
   position: absolute;
   left: 1%;
   bottom: 3px;
@@ -880,7 +762,7 @@ button.swiper-pagination-bullet {
   width: 98%;
 }
 
-.swiper-scrollbar.swiper-scrollbar-vertical, .swiper-vertical > .swiper-scrollbar {
+.swiper-vertical > .swiper-scrollbar {
   position: absolute;
   right: 3px;
   top: 1%;
@@ -910,14 +792,8 @@ button.swiper-pagination-bullet {
 .swiper-zoom-container {
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   text-align: center;
 }
@@ -942,19 +818,13 @@ button.swiper-pagination-bullet {
   margin-left: -21px;
   margin-top: -21px;
   z-index: 10;
-  -webkit-transform-origin: 50%;
-  -ms-transform-origin: 50%;
   transform-origin: 50%;
-  -webkit-box-sizing: border-box;
+  -webkit-animation: swiper-preloader-spin 1s infinite linear;
+  animation: swiper-preloader-spin 1s infinite linear;
   box-sizing: border-box;
   border: 4px solid var(--swiper-preloader-color, var(--swiper-theme-color));
   border-radius: 50%;
   border-top-color: transparent;
-}
-
-.swiper-watch-progress .swiper-slide-visible .swiper-lazy-preloader, .swiper:not(.swiper-watch-progress) .swiper-lazy-preloader {
-  -webkit-animation: swiper-preloader-spin 1s infinite linear;
-  animation: swiper-preloader-spin 1s infinite linear;
 }
 
 .swiper-lazy-preloader-white {
@@ -966,23 +836,13 @@ button.swiper-pagination-bullet {
 }
 
 @-webkit-keyframes swiper-preloader-spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
   100% {
-    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
 @keyframes swiper-preloader-spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
   100% {
-    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
@@ -996,36 +856,25 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-free-mode > .swiper-wrapper {
-  -webkit-transition-timing-function: ease-out;
-  -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
   margin: 0 auto;
 }
 
 .swiper-grid > .swiper-wrapper {
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
 .swiper-grid-column > .swiper-wrapper {
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
 
 .swiper-fade.swiper-free-mode .swiper-slide {
-  -webkit-transition-timing-function: ease-out;
-  -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
 
 .swiper-fade .swiper-slide {
   pointer-events: none;
-  -webkit-transition-property: opacity;
-  -o-transition-property: opacity;
   transition-property: opacity;
 }
 
@@ -1047,8 +896,6 @@ button.swiper-pagination-bullet {
   backface-visibility: hidden;
   z-index: 1;
   visibility: hidden;
-  -webkit-transform-origin: 0 0;
-  -ms-transform-origin: 0 0;
   transform-origin: 0 0;
   width: 100%;
   height: 100%;
@@ -1059,8 +906,6 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-cube.swiper-rtl .swiper-slide {
-  -webkit-transform-origin: 100% 0;
-  -ms-transform-origin: 100% 0;
   transform-origin: 100% 0;
 }
 
@@ -1097,7 +942,6 @@ button.swiper-pagination-bullet {
   top: 0;
   bottom: 0;
   right: 0;
-  -webkit-filter: blur(50px);
   filter: blur(50px);
 }
 
@@ -1130,11 +974,7 @@ button.swiper-pagination-bullet {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   overflow: hidden;
-  -webkit-transition-property: opacity, height, -webkit-transform;
-  transition-property: opacity, height, -webkit-transform;
-  -o-transition-property: transform, opacity, height;
   transition-property: transform, opacity, height;
-  transition-property: transform, opacity, height, -webkit-transform;
 }
 
 .swiper-cards {
@@ -1142,11 +982,52 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-cards .swiper-slide {
-  -webkit-transform-origin: center bottom;
-  -ms-transform-origin: center bottom;
   transform-origin: center bottom;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   overflow: hidden;
+}
+
+.accordion {
+  --accordion-time: 0.3s;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.accordion__control {
+  width: 100%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.accordion__content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  will-change: max-height;
+  transition: all var(--accordion-time) ease-out;
+  box-sizing: content-box;
+}
+
+.accordion__title {
+  font-weight: bold;
+  font-size: 1.17em;
+}
+
+.accordion__icon {
+  transition: transform var(--accordion-time) ease-out;
+}
+
+.is-open .accordion__icon {
+  transform: rotate(45deg);
+}
+
+.is-open .accordion__content {
+  opacity: 1;
+  padding: 20px;
 }
 /*# sourceMappingURL=vendor.css.map */

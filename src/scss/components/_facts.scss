@@ -19,28 +19,12 @@
     background-repeat: no-repeat;
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    left: -9px;
-    top: -195px;
-    width: 570px;
-    height: 1065px;
-    background-image: url("../img/facts-bg.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
   &__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin: 0 auto;
     max-width: 736px;
     gap: 48px;
-  }
-
-  &__item {
   }
 
   &__title {
