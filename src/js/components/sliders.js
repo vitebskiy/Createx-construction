@@ -240,3 +240,4 @@ const heroSlider = new Swiper('.hero-slider', {
       },
     },
 });
+
