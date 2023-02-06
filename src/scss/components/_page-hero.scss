@@ -59,4 +59,9 @@
     background-image: url("../img/work-inner-hero-bg.png");
     background-color: (var(--color-light));
   }
+
+  &--about {
+    background-position: right -60px top 0px;
+    background-image: url("../img/about-hero-bg.png");
+  }
 }
