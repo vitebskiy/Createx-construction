@@ -1139,6 +1139,10 @@ a {
   background-position: right -60px bottom 0px;
   background-image: url("../img/news-hero-bg.png");
 }
+.page-hero--contacts {
+  background-position: right -60px bottom 0px;
+  background-image: url("../img/contacts-hero-bg.png");
+}
 .page-hero--post .page-hero__title {
   margin-bottom: 48px;
   max-width: none;
@@ -2595,6 +2599,49 @@ a {
   margin-bottom: 3px;
 }
 
+.comments {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.comments__title {
+  margin-bottom: 60px;
+}
+.comments__item:not(:last-child) {
+  margin-bottom: 58px;
+}
+
+.post-form {
+  padding-top: 38px;
+  padding-bottom: 180px;
+}
+.post-form__title {
+  margin-bottom: 50px;
+}
+.post-form__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.post-form .form-field__caption {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.post-form .form-field__input {
+  height: 52px;
+  font-size: 16px;
+}
+.post-form__field {
+  width: 48%;
+}
+.post-form__field--big {
+  margin-top: 22px;
+  margin-bottom: 46px;
+  width: 100%;
+}
+.post-form__field--big .form-field__input {
+  height: 100px;
+}
+
 .nav__list {
   display: flex;
   align-items: center;
@@ -2842,5 +2889,61 @@ a {
   -o-object-fit: cover;
   object-fit: cover;
   border-radius: 4px;
+}
+
+.comment {
+  display: flex;
+}
+.comment__left {
+  width: calc(100% - 630px);
+  padding-right: 30px;
+}
+.comment__right {
+  width: 630px;
+}
+.comment__author {
+  margin-bottom: 10px;
+  display: block;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--color-ebony);
+}
+.comment__time {
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--color-shtorm);
+}
+.comment__body {
+  margin-bottom: 19px;
+  font-size: 16px;
+  line-height: 160%;
+  color: var(--color-gray);
+}
+.comment__body a {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+.comment__body * {
+  margin: 0;
+  margin-bottom: 20px;
+}
+.comment__body *:last-child {
+  margin: 0;
+}
+.comment__reply {
+  display: inline-flex;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--color-shtorm);
+}
+.comment__reply svg {
+  margin-right: 8px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  fill: currentColor;
 }
 /*# sourceMappingURL=main.css.map */
