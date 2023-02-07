@@ -10,5 +10,15 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 102px;
+    row-gap: 40px;
+  }
+
+  &--about {
+    padding: 120px 0;
+    background-color: var(--color-light);
+
+    .partners__title {
+      margin-bottom: 25px;
+    }
   }
 }
