@@ -141,6 +141,16 @@ circles.forEach(function (el) {
 });
 "use strict";
 
+var selects = document.querySelectorAll('.form-field__select');
+selects.forEach(function (el) {
+  new Choices(el, {
+    shouldSort: false,
+    position: 'bottom',
+    searchEnabled: false
+  });
+});
+"use strict";
+
 var portSlider = document.querySelector('.portfolio-section__items');
 var relatedSlider = document.querySelector('.related-projects__items');
 
