@@ -223,7 +223,7 @@ const heroSlider = new Swiper('.hero-slider', {
   },
   speed: heroSliderSpeed,
   autoplay: {
-    delay: 1000,
+    delay: 2000,
   },
   pagination: {
     el: '.hero__pag',

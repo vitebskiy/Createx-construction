@@ -24,7 +24,6 @@ circles.forEach(el => {
     let full = el.dataset.full;
     let value = el.dataset.value;
     let percentageProgress = Math.floor(value / full * 100);
-    console.log(percentageProgress)
     valueBlock.textContent = value;
     progress.setAttribute('stroke-dasharray', circleLength);
     progress.setAttribute('stroke-dashoffset', circleLength - circleLength * percentageProgress / 100);

@@ -13,8 +13,9 @@ if (document.querySelector('.we-offer')) {
   });
 }
 "use strict";
+"use strict";
 
-console.log('maxgraph');
+var modal = new GraphModal();
 "use strict";
 
 var portfolioTabsNav = document.querySelector('.portfolio-tabs-nav');
@@ -77,7 +78,6 @@ if (portfolioTabsNav) {
   loadMore.addEventListener('click', function (e) {
     var visibleItems = document.querySelectorAll('.portfolio-tabs__item--visible');
     var path = document.querySelector('.portfolio-tabs-nav__btn--active').dataset.path;
-    console.log(path);
 
     if (path == 'all') {
       portfolioTabsItems.forEach(function (el) {
@@ -115,7 +115,6 @@ circles.forEach(function (el) {
     var full = el.dataset.full;
     var value = el.dataset.value;
     var percentageProgress = Math.floor(value / full * 100);
-    console.log(percentageProgress);
     valueBlock.textContent = value;
     progress.setAttribute('stroke-dasharray', circleLength);
     progress.setAttribute('stroke-dashoffset', circleLength - circleLength * percentageProgress / 100);
@@ -348,7 +347,7 @@ var heroSlider = new Swiper('.hero-slider', {
   },
   speed: heroSliderSpeed,
   autoplay: {
-    delay: 1000
+    delay: 2000
   },
   pagination: {
     el: '.hero__pag',
@@ -364,6 +363,55 @@ var heroSlider = new Swiper('.hero-slider', {
     }
   }
 });
+"use strict";
+
+var scroll = new SmoothScroll('.to-top');
+var toTop = document.querySelector('.to-top');
+var heroHeight;
+
+if (document.querySelector('.hero')) {
+  heroHeight = document.querySelector('.hero').offsetHeight;
+}
+
+if (document.querySelector('.page-hero')) {
+  heroHeight = document.querySelector('.page-hero').offsetHeight;
+}
+
+var isVisibleToTop = function isVisibleToTop() {
+  var y = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+
+  if (y >= heroHeight) {
+    toTop.classList.add('to-top--active');
+  } else {
+    toTop.classList.remove('to-top--active');
+  }
+};
+
+isVisibleToTop(window.scrollY);
+window.addEventListener('scroll', function () {
+  var y = window.scrollY;
+  isVisibleToTop(y);
+});
+"use strict";
+
+var videoBlock = document.querySelector('.video-block');
+
+if (videoBlock) {
+  var video = videoBlock.querySelector('video');
+  var playBtn = videoBlock.querySelector(".video-block__play");
+  playBtn.addEventListener('click', function () {
+    videoBlock.classList.add('video-block--played');
+    video.play();
+    video.controls = true;
+    playBtn.classList.add('video-block__play--played');
+  });
+
+  video.onpause = function () {
+    videoBlock.classList.remove('video-block--played');
+    video.controls = false;
+    playBtn.classList.remove('video-block__play--played');
+  };
+}
 /**
   * название функции
   *

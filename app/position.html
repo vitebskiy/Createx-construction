@@ -76,7 +76,7 @@
                 </div>
                 <h3 class="position-item__title">Heavy Equipment Operator</h3>
               </div>
-              <a class="btn btn--stroke-primary position-item__link">Apply now</a>
+              <a href="#" class="btn btn--stroke-primary position-item__link">Apply now</a>
             </article>
           </li>
           <li class="position-list__item">
@@ -88,7 +88,7 @@
                 </div>
                 <h3 class="position-item__title">Financial Compliance Analyst</h3>
               </div>
-              <a class="btn btn--stroke-primary position-item__link">Apply now</a>
+              <a href="#" class="btn btn--stroke-primary position-item__link">Apply now</a>
             </article>
           </li>
           <li class="position-list__item">
@@ -100,7 +100,7 @@
                 </div>
                 <h3 class="position-item__title">Project Manager - Buildings</h3>
               </div>
-              <a class="btn btn--stroke-primary position-item__link">Apply now</a>
+              <a href="#" class="btn btn--stroke-primary position-item__link">Apply now</a>
             </article>
           </li>
           <li class="position-list__item">
@@ -112,7 +112,7 @@
                 </div>
                 <h3 class="position-item__title">Environment Specialist</h3>
               </div>
-              <a class="btn btn--stroke-primary position-item__link">Apply now</a>
+              <a href="#" class="btn btn--stroke-primary position-item__link">Apply now</a>
             </article>
           </li>
           <li class="position-list__item">
@@ -124,7 +124,7 @@
                 </div>
                 <h3 class="position-item__title">Accountant</h3>
               </div>
-              <a class="btn btn--stroke-primary position-item__link">Apply now</a>
+              <a href="#" class="btn btn--stroke-primary position-item__link">Apply now</a>
             </article>
           </li>
         </ul>
@@ -136,8 +136,10 @@
             Send your CV&nbsp;or subscribe to&nbsp;our newsletter to&nbsp;receive information about new vacancies.
           </p>
           <div class="position-looking__btns">
-            <button class="btn-reset btn btn--stroke-primary position-looking__btn position-looking__btn--subs">subscribe</button>
-            <button class="btn-reset btn btn--fill position-looking__btn position-looking__btn--send">send cv</button>
+            <button class="btn-reset btn btn--stroke-primary position-looking__btn position-looking__btn--subs"
+              data-graph-animation="custom" data-graph-path="first">subscribe</button>
+            <button class="btn-reset btn btn--fill position-looking__btn position-looking__btn--send"
+              ata-graph-animation="custom" data-graph-path="second">send cv</button>
           </div>
         </div>
       </div>
@@ -207,6 +209,14 @@
 
     </main>
     <footer class="footer">
+  <a href="#page" data-scroll class="to-top">
+    <span class="to-top__text">Go to top</span>
+    <span class="to-top__icon">
+      <svg>
+        <use xlink:href="img/sprite.svg#to-top  "></use>
+      </svg>
+    </span>
+  </a>
   <div class="container footer__container grid">
     <div class="footer__left">
       <div class="footer__top">
@@ -308,7 +318,65 @@
     </small>
   </div>
 </footer>
+    <div class="graph-modal">
+  <div class="graph-modal__container site-modal" role="dialog" aria-modal="true" data-graph-target="first">
+    <button class="btn-reset graph-modal__close js-modal-close modal__close"
+      aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <h2 class="site-modal__title">Subscribe to our newsletter</h2>
+      <form class="site-modal__form form-1">
+        <label class="form-field form-field--gray site-modal__field">
+          <span class="form-field__caption">Name*</span>
+          <input type="email" name="name" required placeholder="Your name" class="form-field__input">
+        </label>
+        <label class="form-field form-field--gray site-modal__field">
+          <span class="form-field__caption">Email</span>
+          <input type="email" name="email" placeholder="Your working email" class="form-field__input">
+        </label>
+        <button class="site-modal__btn btn btn--fill" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
 
+  <div class="graph-modal__container site-modal" role="dialog" aria-modal="true" data-graph-target="second">
+    <button class="btn-reset graph-modal__close js-modal-close modal__close"
+      aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <h2 class="site-modal__title">Send your CV</h2>
+      <form class="site-modal__form form-1">
+        <label class="form-field form-field--gray site-modal__field">
+          <span class="form-field__caption">Name*</span>
+          <input type="email" name="name" required placeholder="Your name" class="form-field__input">
+        </label>
+        <label class="form-field form-field--gray site-modal__field">
+          <span class="form-field__caption">Location*</span>
+          <select name="location" class="form-field__select" required>
+            <option value="">Choose location</option>
+            <option value="New_York">New York</option>
+          </select>
+        </label>
+        <label class="form-field form-field--gray site-modal__field">
+          <span class="form-field__caption">Phone*</span>
+          <input type="tel" name="phone" required placeholder="Your phone number" class="form-field__input">
+        </label>
+        <label class="form-field form-field--gray site-modal__field">
+          <span class="form-field__caption">Email*</span>
+          <input type="email" name="email" required placeholder="Your working email" class="form-field__input">
+        </label>
+        <label class="form-field form-field--gray site-modal__field form-contacts__field--big">
+          <span class="form-field__caption">Сovering letter</span>
+          <textarea name="message" placeholder="Your covering letter"
+            class="form-field__input form-field__input--big"></textarea>
+        </label>
+        <label class="custom-file site-modal__checkbox">
+          <input type="file" class="custom-file__input">
+          <span class="custom-file__text">Attach your CV*</span>
+        </label>
+        <button class="site-modal__btn btn btn--fill" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</div>
     
   </div>
   <script src="js/vendor.js"></script>

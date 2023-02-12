@@ -69,8 +69,6 @@
     display: none;
     grid-column: 4 span;
 
-   
-
     &--visible {
       display: block;
     }
@@ -89,6 +87,20 @@
   font-size: 16px;
   line-height: 160%;
   color: var(--color-gray);
+  transition: color 0.3s ease-in-out;
+
+  &:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  &:hover {
+    color: var(--color-primary);
+  }
+
+  &:active {
+    color: var(--color-active);
+  }
 
   svg {
     margin-right: 16px;
@@ -97,5 +109,18 @@
     color: inherit;
     fill: currentColor;
     object-fit: cover;
+  }
+}
+
+.portfolio-tabs-nav__btn {
+  &:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  &:hover {
+    .portfolio-tabs-nav__text {
+      color: var(--color-ebony);
+    }
   }
 }

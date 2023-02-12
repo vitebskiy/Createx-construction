@@ -68,6 +68,17 @@
   padding: 11px 30px;
   font-size: 14px;
   letter-spacing: 0.5px;
+  transition: color 0.3s ease-in-out;
+}
+.position-item__link:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+.position-item__link:hover {
+  color: var(--color-primary);
+}
+.position-item__link:active {
+  color: var(--color-active);
 }
 
 .position-looking {
@@ -92,6 +103,11 @@
   margin-right: 22px;
   padding-right: 43px;
   padding-left: 44px;
+  transition: color 0.3s ease-in-out;
+}
+.position-looking__btn--subs:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 .position-looking__btn--send {
   padding-right: 54px;
