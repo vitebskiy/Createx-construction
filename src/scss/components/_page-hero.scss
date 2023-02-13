@@ -32,6 +32,11 @@
         margin-bottom: 60px;
       }
     }
+
+    @include mobile {
+      font-size: 40px;
+      line-height: 54px;
+    }
   }
 
   &__descr {
@@ -40,6 +45,11 @@
     font-size: 20px;
     line-height: 150%;
     color: var(--color-storm);
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   &__bottom {
@@ -51,16 +61,16 @@
     .article-meta__item {
       font-size: 16px;
       line-height: 160%;
-     }
+    }
 
     .article-meta__item--comments {
       background-size: 20px 20px;
-    }     
+    }
 
-     a.article-meta__item {
+    a.article-meta__item {
       font-weight: 700;
       color: var(--color-primary);
-     }
+    }
 
     time.article-meta__item {
       padding-left: 28px;
@@ -134,7 +144,10 @@
       letter-spacing: 1px;
       text-transform: initial;
     }
+  }
 
-
+  @include tablet {
+    background-image: none;
+    min-height: auto;
   }
 }

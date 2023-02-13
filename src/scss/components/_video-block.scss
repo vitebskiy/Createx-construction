@@ -69,6 +69,10 @@
     }
   }
 
+  @include mobile {
+    height: 300px;
+  }
+
   // &__muted {
   //   @include flex-all-center;
 

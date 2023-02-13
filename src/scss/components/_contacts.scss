@@ -5,11 +5,21 @@
   &__content {
     display: flex;
     justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+    }
   }
 
   &__image {
     flex-shrink: 0;
     margin-right: 20px;
+    margin-bottom: 30px;
+  }
+
+  @include tablet {
+    margin-right: 0;
+    margin-bottom: 30px;
   }
 }
 
@@ -21,6 +31,10 @@
     justify-content: space-between;
     margin-bottom: 23px;
     width: 100%;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__field {
@@ -28,6 +42,7 @@
     width: 47.5%;
   }
 }
+
 .contacts {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -60,6 +75,14 @@
     &--big {
       width: 100%;
     }
+
+    @include mobile {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
   }
 
   &__bottom {
@@ -67,6 +90,11 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 39px;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__checkbox {
@@ -83,6 +111,10 @@
       &::after {
         top: 4px;
       }
+    }
+    
+    @include mobile {
+      margin-bottom: 20px;
     }
   }
 
@@ -178,6 +210,10 @@
 
   .choices__list--dropdown {
     background-color: var(--color-athens);
+  }
+
+  @include tablet {
+    width: 100%;
   }
 }
 

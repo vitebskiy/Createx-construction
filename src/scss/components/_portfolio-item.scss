@@ -52,6 +52,11 @@
     color: var(--color-primary);
     transition: opacity 0.3s ease-in-out, margin-bottom 0.3s ease-in-out;
     will-change: margin-bottom;
+
+    @include minitablet {
+      margin-bottom: 0;
+      opacity: 1;
+    }
   }
 
   &:focus {
@@ -70,7 +75,13 @@
     .portfolio-item {
       &__image {
         height: 277px;
+
+        @include minitablet {
+          height: 345px;
+        }
       }
     }
+
+    
   }
 }

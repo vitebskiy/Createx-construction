@@ -10,6 +10,10 @@
     z-index: 30;
     background-color: var(--color-light);
     transform: translateY(-50%);
+
+    @include midldesc {
+      display: none;
+    }
   }
 
   &__prev {
@@ -19,6 +23,10 @@
     z-index: 30;
     background-color: var(--color-light);
     transform: translateY(-50%);
+
+    @include midldesc {
+      display: none;
+    }
   }
 
   &__pag {
@@ -50,6 +58,27 @@
       &::after {
         display: none;
       }
+
+      @include minitablet {
+        width: 25%;
+      }
+    }
+
+    @include midldesc {
+      left: 3% !important;
+    }
+
+    @include minidesk {
+      left: 15px !important;
+    }
+
+    @include minitablet {
+      width: calc(100% - 30px) !important;
+      bottom: 50px !important;
+    }
+
+    @include mobile {
+      display: none;
     }
   }
 
@@ -78,6 +107,11 @@
     .btn {
       &:not(:last-child) {
         margin-right: 20px;
+
+        @include mobile {
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
       }
     }
   }
@@ -110,4 +144,13 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-color: var(--color-gray);
+
+  @include minitablet {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
+  @include mobile {
+    padding: 100px 0;
+  }
 }
