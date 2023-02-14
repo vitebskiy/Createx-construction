@@ -6,11 +6,23 @@
 
     &:not(:last-child) {
       margin-right: 35px;
+
+      @include tablet {
+        margin-bottom: 30px;
+      }
     }
   }
 
   @include tablet {
     display: none;
+  }
+
+  &--nav {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
   }
 }
 

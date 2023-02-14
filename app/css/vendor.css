@@ -1403,7 +1403,9 @@ html {
   box-sizing: border-box;
 }
 
-*, :after, :before {
+*,
+:after,
+:before {
   box-sizing: inherit;
 }
 
@@ -1418,7 +1420,7 @@ html {
 }
 
 .graph-modal {
-  --transition-time:0.3s;
+  --transition-time: 0.3s;
   position: fixed;
   left: 0;
   top: 0;
@@ -1488,7 +1490,8 @@ html {
   opacity: 0;
 }
 
-.fade, .fade.animate-open {
+.fade,
+.fade.animate-open {
   transition: opacity var(--transition-time);
 }
 
@@ -1501,7 +1504,8 @@ html {
   transform: translateY(-100px);
 }
 
-.fadeInUp, .fadeInUp.animate-open {
+.fadeInUp,
+.fadeInUp.animate-open {
   transition: transform var(--transition-time), opacity var(--transition-time);
 }
 

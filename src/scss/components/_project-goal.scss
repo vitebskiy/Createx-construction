@@ -2,17 +2,25 @@
   padding-top: 30px;
   padding-bottom: 121px;
 
+  .grid {
+    @include minitablet {
+      display: block;
+    }
+  }
+
   &__left {
     padding-top: 25px;
     grid-column: 6 span;
-
-    
   }
 
   &__right {
     grid-column: 6 span;
     display: flex;
     justify-content: flex-end;
+
+    @include minitablet {
+      justify-content: flex-start;
+    }
   }
 
   &__title {
@@ -46,6 +54,7 @@
   }
 
   &__category {
+    flex-shrink: 0;
     width: 130px;
     font-weight: 700;
     font-size: 16px;
@@ -58,5 +67,13 @@
     font-size: 16px;
     line-height: 160%;
     color: var(--color-shtorm);
+  }
+
+  @include minitablet {
+    width: 100%;
+  }
+
+  @include mobile {
+    padding: 10px 0;
   }
 }
