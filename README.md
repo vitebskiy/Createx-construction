@@ -6,5 +6,6 @@
 1. Install deps `npm i`
 2. Run `gulp`
 
-### Demo: <a href="https://vitebskiy.github.io/site-Travelx/" target="_blank">Createx-construction</a> 
+### Demo: <a href="https://vitebskiy.github.io/Createx-construction/" target="_blank">Createx-construction</a> 
+
 
